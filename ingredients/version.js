@@ -19,7 +19,7 @@ var vinylPaths = require('vinyl-paths');
 elixir.extend('version', function(src, buildDir) {
 
     src = utilities.prefixDirToFiles('public', src);
-    buildDir = buildDir ? buildDir + '/build' : 'public/build';
+    buildDir = buildDir ? buildDir : 'public/build';
 
     gulp.task('version', function() {
         var files = vinylPaths();
